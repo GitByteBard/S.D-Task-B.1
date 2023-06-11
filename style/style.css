@@ -47,7 +47,9 @@ body {
 .header_list a {
   color: aliceblue;
   display: block;
-  font-size: 1.5em;
+  font-family: "VRIN";
+  font-size: 1.4em;
+  letter-spacing: 0.5px;
 }
 
 .hr-horizontal-gradient {
@@ -105,7 +107,7 @@ h1 {
 .gallery_items {
   margin-top: 60px;
   display: grid;
-  gap: 10px;
+  gap: 20px;
   grid-template-columns: repeat(4, minmax(400px, 1fr));
 }
 
@@ -154,9 +156,10 @@ footer {
   display: grid;
   align-items: center;
   grid-template:
-    20px minmax(auto, 80px) / minmax(auto, 300px) minmax(auto, 300px)
+    20px minmax(auto, 80px) / minmax(auto, 400px) minmax(auto, 300px)
     minmax(auto, 1500px);
   font-size: 1.4em;
+  font-family: "VRIN";
 }
 
 .footer_text {
@@ -174,7 +177,14 @@ footer {
 
 @font-face {
   font-family: "ITCED";
-  src: url(../new-site/fonts/ITCEDSCR.TTF), url(/new-site/fonts/ITCEDSCR.woff);
+  src: url(/new-site/fonts/ITCEDSCR.TTF), url(/new-site/fonts/ITCEDSCR.woff);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VRIN";
+  src: url(/new-site/fonts/vrindab.ttf), url(/new-site/fonts/vrindab.woff);
   font-weight: normal;
   font-style: normal;
 }
