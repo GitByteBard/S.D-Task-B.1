@@ -3,6 +3,7 @@ body {
 }
 
 .wrapper {
+  margin: auto 0;
   min-height: 100%;
   display: grid;
   grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
@@ -19,15 +20,18 @@ body {
   align-items: center;
   grid-template:
     1fr 20px / minmax(auto, 200px) minmax(auto, 300px)
-    minmax(auto, 1100px);
+    minmax(auto, 1300px);
 }
 
 .header_logo {
   width: 70px;
   height: 70px;
-  border-radius: 50%;
-  background-color: rgb(234, 234, 245);
   grid-column: 2 / 3;
+  margin-top: -25px;
+}
+
+.header_logo img {
+  width: 100px;
 }
 
 .header_menu {
@@ -49,6 +53,7 @@ body {
 .hr-horizontal-gradient {
   margin: -12px;
   margin-top: 9px;
+  margin-left: 10px;
   height: 6px;
   border: none;
   background: linear-gradient(45deg, rgb(26, 48, 93), rgb(222, 247, 255));
@@ -99,7 +104,6 @@ h1 {
 
 .gallery_items {
   margin-top: 60px;
-  margin-left: 50px;
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(4, minmax(400px, 1fr));
@@ -146,7 +150,26 @@ h1 {
 
 footer {
   grid-area: footer;
-  background-color: rgb(39, 34, 43);
+  background-color: rgb(26, 48, 93);
+  display: grid;
+  align-items: center;
+  grid-template:
+    20px minmax(auto, 80px) / minmax(auto, 300px) minmax(auto, 300px)
+    minmax(auto, 1500px);
+  font-size: 1.4em;
+}
+
+.footer_text {
+  grid-column-start: 1;
+  text-align: left;
+  margin-left: 20px;
+  color: aliceblue;
+}
+.footer_copy {
+  grid-column-start: 3;
+  text-align: right;
+  margin-right: 20px;
+  color: aliceblue;
 }
 
 @font-face {
