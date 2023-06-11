@@ -42,14 +42,44 @@ body {
   display: grid;
   grid-auto-flow: column;
   justify-items: end;
+  list-style: none;
+}
+@media screen and (min-width: 400px) {
+  ul {
+    flex-direction: row;
+    min-width: 400px;
+  }
 }
 
 .header_list a {
-  color: aliceblue;
-  display: block;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
   font-family: "VRIN";
-  font-size: 1.4em;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px;
+  position: relative;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #df1111;
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+a:hover {
+  color: #f8aa00;
+}
+a:hover::after {
+  width: 100%;
 }
 
 .hr-horizontal-gradient {
@@ -87,7 +117,7 @@ h1 {
   margin: -50px auto 10px;
   height: 50px;
   border: none;
-  border-bottom: 2px solid #1f1209;
+  border-bottom: 3px solid #1f1209;
   box-shadow: 0 12px 12px -12px #5c5b5b;
   width: 85%;
 }
@@ -101,7 +131,7 @@ h1 {
   grid-area: main;
   padding: 30px 15px;
   display: grid;
-  grid-template: 1fr / 1fr minmax(auto, 400px) minmax(auto, 500px) 1fr 1fr;
+  grid-template: 1fr 1fr/ 1fr minmax(auto, 615px) minmax(auto, 500px) 1fr 1fr;
 }
 
 .gallery_items {
@@ -150,6 +180,24 @@ h1 {
   width: 100%;
 }
 
+.google_map {
+  grid-row: 5;
+  grid-column: 2 / 4;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.map_title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 80px;
+  font-family: "ITCED";
+  text-shadow: 4px 4px 5px white;
+}
+
+.map {
+  border: 5px solid rgb(26, 48, 93);
+}
 footer {
   grid-area: footer;
   background-color: rgb(26, 48, 93);
