@@ -2,16 +2,7 @@ body {
   background-color: rgb(222, 247, 255);
 }
 
-.wrapper {
-  margin: auto 0;
-  min-height: 100%;
-  display: grid;
-  grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-}
+/* HEADER */
 .header {
   grid-area: header;
   background-color: rgb(26, 48, 93);
@@ -92,6 +83,25 @@ a:hover::after {
   grid-column-start: 1;
   grid-column-end: 5;
 }
+/* HEADER */
+
+/* MAIN PAGE */
+.wrapper {
+  margin: auto 0;
+  min-height: 100%;
+  display: grid;
+  grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+.main {
+  grid-area: main;
+  padding: 30px 15px;
+  display: grid;
+  grid-template: 600px 1fr/ 500px minmax(auto, 520px) minmax(auto, 520px) 500px;
+}
 .herb {
   grid-column: 2 / 4;
   grid-row: 1 / 1;
@@ -106,20 +116,41 @@ a:hover::after {
 .content_title {
   text-align: center;
   grid-column: 2 / 4;
-  margin: 50px;
+  grid-row-start: 1;
+  margin: 190px;
   font-family: "ITCED";
-  font-size: 100px;
-}
-h1 {
+  font-size: 55px;
   text-shadow: 4px 4px 5px white;
 }
+
 .hr-shelf {
   margin: -50px auto 10px;
   height: 50px;
   border: none;
   border-bottom: 3px solid #1f1209;
   box-shadow: 0 12px 12px -12px #5c5b5b;
-  width: 85%;
+  width: 100%;
+  align-self: center;
+}
+
+.bird1 {
+  grid-column: 4;
+  grid-row-start: 1;
+  align-self: self-end;
+  justify-self: left;
+}
+.bird1 img {
+  width: 400px;
+}
+
+.bird2 {
+  grid-column: 1;
+  grid-row-start: 1;
+  justify-self: right;
+  align-self: self-end;
+}
+.bird2 img {
+  width: 400px;
 }
 
 .content_gallery {
@@ -127,18 +158,11 @@ h1 {
   padding: 0px 0px 0px 30px;
 }
 
-.main {
-  grid-area: main;
-  padding: 30px 15px;
-  display: grid;
-  grid-template: 1fr 1fr/ 1fr minmax(auto, 615px) minmax(auto, 500px) 1fr 1fr;
-}
-
 .gallery_items {
   margin-top: 60px;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(4, minmax(400px, 1fr));
+  grid-template-columns: repeat(4, minmax(450px, 1fr));
 }
 
 .gallery_item {
@@ -146,7 +170,6 @@ h1 {
   padding: 0px 0px 85% 0px;
   grid-row: 2 / 3;
 }
-
 .gallery_item img {
   position: absolute;
   top: 0;
@@ -155,9 +178,13 @@ h1 {
   height: 100%;
   object-fit: cover;
 }
+
 .gallery_item_big {
   grid-column: span 3;
   grid-row: span 3;
+}
+.gallery_item_big video {
+  width: 100%;
 }
 
 .gallery_description {
@@ -176,9 +203,6 @@ h1 {
   text-align: left;
   font-size: 25px;
 }
-.gallery_item_big video {
-  width: 100%;
-}
 
 .google_map {
   grid-row: 5;
@@ -186,7 +210,6 @@ h1 {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-
 .map_title {
   margin-bottom: 50px;
   text-align: center;
@@ -194,10 +217,51 @@ h1 {
   font-family: "ITCED";
   text-shadow: 4px 4px 5px white;
 }
-
 .map {
   border: 5px solid rgb(26, 48, 93);
 }
+
+/* MAIN PAGE */
+
+/* Attractions page */
+.att_wrapper {
+  margin: auto 0;
+  min-height: 100%;
+  display: grid;
+  grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+  grid-template-areas:
+    "header"
+    "att_main"
+    "footer";
+}
+
+.att_main {
+  grid-area: att_main;
+  padding: 30px 15px;
+  display: grid;
+  grid-template: minmax(auto, 700px) 1fr 1fr 1fr / 1fr;
+}
+
+.att_title {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(400px, 1fr));
+  grid-template-rows: 400px;
+}
+
+.att_text {
+  grid-column-start: 2;
+  grid-column: span 2;
+  font-family: "ITCED";
+  font-size: 100px;
+  color: rgb(56, 61, 61);
+  text-shadow: 4px 4px 5px rgb(140, 170, 193);
+}
+
+.att_list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(400px, 1fr));
+}
+/* Footer */
 footer {
   grid-area: footer;
   background-color: rgb(26, 48, 93);
