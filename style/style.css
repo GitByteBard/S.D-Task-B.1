@@ -9,7 +9,6 @@ body {
 
 /* HEADER */
 .header {
-  margin: auto;
   grid-area: header;
   background-color: rgb(26, 48, 93);
   display: grid;
@@ -38,8 +37,14 @@ body {
 .header_list {
   display: grid;
   grid-auto-flow: column;
-  justify-self: end;
+  justify-items: end;
   list-style: none;
+}
+@media screen and (min-width: 37.5em) {
+  .header_list {
+    flex-direction: row;
+    min-width: 400px;
+  }
 }
 
 .header_list a {
@@ -51,6 +56,7 @@ body {
   letter-spacing: 0.15em;
   display: inline-block;
   padding: 15px;
+  position: relative;
 }
 
 a:after {
@@ -98,7 +104,7 @@ a:hover::after {
   grid-area: main;
   padding: 30px 15px;
   display: grid;
-  grid-template: 400px 1fr/ 1fr minmax(auto, 520px) minmax(auto, 520px) 1fr;
+  grid-template: 400px 1fr/ 500px minmax(auto, 520px) minmax(auto, 520px) 500px;
   background-color: rgb(222, 247, 255);
 }
 .herb {
@@ -158,19 +164,22 @@ a:hover::after {
 }
 
 .gallery_items {
-  margin-top: 60px;
+  margin-top: 120px;
   display: grid;
-  gap: 20px;
+  gap: 30px;
   grid-template-columns: repeat(4, minmax(450px, 1fr));
+  grid-template-rows: 1fr 400px;
 }
 
 .gallery_item {
+  display: flex;
   position: relative;
   padding: 0px 0px 85% 0px;
-  grid-row: 2 / 3;
+  grid-row-start: 2;
+  height: 100%;
+  width: auto;
 }
 .gallery_item img {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -179,11 +188,11 @@ a:hover::after {
 }
 
 .gallery_item_big {
-  grid-column: span 3;
-  grid-row: span 3;
+  grid-row-start: 1;
 }
 .gallery_item_big video {
-  width: 100%;
+  height: 100%;
+  width: auto;
 }
 
 .gallery_description {
@@ -209,8 +218,8 @@ a:hover::after {
   grid-column: 1 / 3;
   justify-content: center;
   grid-template-columns: 1fr 520px 520px 1fr;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 .map_title {
   grid-row: 1;

@@ -107,7 +107,7 @@ a:hover::after {
   grid-area: att_main;
   padding: 30px 15px;
   display: grid;
-  grid-template: 500px 1fr minmax(200px, auto) / 1fr;
+  grid-template: 300px minmax(auto, 600px) / 1fr;
   background-color: rgb(222, 247, 255);
 }
 
@@ -148,68 +148,80 @@ a:hover::after {
 .wrapper_slider {
   position: relative;
   width: 100%;
-  max-width: 1600px;
   height: 100vh;
-  justify-self: center;
   display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
 }
 
 .slider {
   position: relative;
-  grid-row: 2 / 5;
-  max-width: 1600px;
+  max-width: 1200px;
   height: auto;
   overflow: hidden;
-  border: 10px solid whitesmoke;
-}
-
-.controls {
-  position: relative;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 100;
-}
-
-.controls label {
-  height: 20px;
-  width: 20px;
-  background: white;
-  border-radius: 20px;
-  cursor: pointer;
-  opacity: 0.4;
-  transition: 0.5s;
+  border: 10px solid rgb(17, 17, 17);
 }
 
 .slider-items {
-  display: flex;
   width: 500%;
   height: 100%;
+  display: flex;
 }
 
 .slider-items .item {
-  width: 100vw;
-  height: 100vh;
-  justify-self: center;
-  align-items: center;
+  width: 20%;
+  transition: 0.4s;
 }
 
 .slider-items .item img {
   max-width: 100%;
-  max-height: auto;
+  height: auto;
+}
+.slider-items input {
+  position: absolute;
+  visibility: hidden;
+}
+.slider-nav {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.slider-items .item:nth-child(1) {
-  background: #3b3b3b;
+.slider-nav .slider-nav-item {
+  width: 60px;
+  height: 15px;
+  border: 2px solid rgb(40, 39, 39);
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: all 0.5s ease;
 }
-.slider-items .item:nth-child(2) {
-  background: #565fc8;
+
+.slider-nav .slider-nav-item:hover {
+  background-color: #fff;
+  opacity: 1;
 }
-.slider-items .item:nth-child(3) {
-  background: #be56c8;
+
+#s1:checked ~ .s1 {
+  margin-left: 0%;
 }
+#s2:checked ~ .s1 {
+  margin-left: -25.8%;
+}
+#s3:checked ~ .s1 {
+  margin-left: -72%;
+}
+#s4:checked ~ .s1 {
+  margin-left: -180%;
+}
+#s5:checked ~ .s1 {
+  margin-left: -720%;
+}
+
 /*SLIDER*/
 
 /* Footer */
