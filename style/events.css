@@ -90,6 +90,23 @@ a:hover::after {
 }
 /* HEADER */
 
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+.main {
+  grid-area: main;
+  padding: 30px 15px;
+  display: grid;
+  grid-template: 400px 1fr/ 500px minmax(auto, 520px) minmax(auto, 520px) 500px;
+  background-color: rgb(222, 247, 255);
+}
+
 /* Footer */
 footer {
   grid-area: footer;

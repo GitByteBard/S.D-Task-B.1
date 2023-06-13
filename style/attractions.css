@@ -16,7 +16,7 @@ body {
   padding: 12px;
   align-items: center;
   grid-template:
-    1fr 20px / minmax(200px, auto) minmax(300px, auto)
+    1fr 20px / minmax(100px, auto) minmax(300px, auto)
     1110px;
 }
 
