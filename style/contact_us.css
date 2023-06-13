@@ -1,0 +1,131 @@
+* {
+  margin: auto;
+  padding: 0;
+}
+body {
+  margin: auto;
+  position: relative;
+}
+
+/* HEADER */
+.header {
+  grid-area: header;
+  background-color: rgb(26, 48, 93);
+  display: grid;
+  padding: 12px;
+  align-items: center;
+  grid-template:
+    1fr 20px / minmax(auto, 200px) minmax(auto, 300px)
+    minmax(auto, 1300px);
+}
+
+.header_logo {
+  width: 70px;
+  height: 70px;
+  grid-column: 2 / 3;
+  margin-top: -25px;
+}
+
+.header_logo img {
+  width: 100px;
+}
+
+.header_menu {
+  grid-column: 3 / 4;
+}
+
+.header_list {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: end;
+  list-style: none;
+}
+@media screen and (min-width: 37.5em) {
+  .header_list {
+    flex-direction: row;
+    min-width: 400px;
+  }
+}
+
+.header_list a {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "VRIN";
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px;
+  position: relative;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #df1111;
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+a:hover {
+  color: #f8aa00;
+}
+a:hover::after {
+  width: 100%;
+}
+
+.hr-horizontal-gradient {
+  margin: -12px;
+  margin-top: 9px;
+  margin-left: 10px;
+  height: 6px;
+  border: none;
+  background: linear-gradient(45deg, rgb(26, 48, 93), rgb(222, 247, 255));
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+/* HEADER */
+
+/* Footer */
+footer {
+  grid-area: footer;
+  background-color: rgb(26, 48, 93);
+  display: grid;
+  align-items: center;
+  grid-template:
+    20px minmax(auto, 80px) / minmax(auto, 400px) minmax(auto, 300px)
+    minmax(auto, 1500px);
+  font-size: 1.4em;
+  font-family: "VRIN";
+}
+
+.footer_text {
+  grid-column-start: 1;
+  text-align: left;
+  margin-left: 20px;
+  color: aliceblue;
+}
+.footer_copy {
+  grid-column-start: 3;
+  text-align: right;
+  margin-right: 20px;
+  color: aliceblue;
+}
+
+@font-face {
+  font-family: "ITCED";
+  src: url(/new-site/fonts/ITCEDSCR.TTF), url(/new-site/fonts/ITCEDSCR.woff);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VRIN";
+  src: url(/new-site/fonts/vrindab.ttf), url(/new-site/fonts/vrindab.woff);
+  font-weight: normal;
+  font-style: normal;
+}
