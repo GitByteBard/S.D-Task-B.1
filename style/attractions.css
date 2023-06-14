@@ -122,11 +122,19 @@ a:hover::after {
   text-align: center;
   grid-column: 2 / 4;
   grid-row-start: 1;
-  margin: 100px;
   font-family: "ITCED";
   font-size: 55px;
   color: rgb(56, 61, 61);
   text-shadow: 4px 4px 5px rgb(140, 170, 193);
+}
+.att_text .hr-shelf {
+  margin: -50px auto 10px;
+  height: 50px;
+  border: none;
+  border-bottom: 3px solid #1f1209;
+  box-shadow: 0 12px 12px -12px #5c5b5b;
+  width: 100%;
+  align-self: center;
 }
 
 .bird1 {

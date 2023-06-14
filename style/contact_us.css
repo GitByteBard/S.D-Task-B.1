@@ -7,6 +7,16 @@ body {
   position: relative;
 }
 
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
 /* HEADER */
 .header {
   grid-area: header;
@@ -15,8 +25,8 @@ body {
   padding: 12px;
   align-items: center;
   grid-template:
-    1fr 20px / minmax(auto, 200px) minmax(auto, 300px)
-    minmax(auto, 1300px);
+    minmax(auto, 100px) 20px / minmax(auto, 400px) minmax(auto, 300px)
+    minmax(auto, 1500px);
 }
 
 .header_logo {
@@ -89,6 +99,111 @@ a:hover::after {
   grid-column-end: 5;
 }
 /* HEADER */
+
+.main {
+  grid-area: main;
+  padding: 30px 15px;
+  display: grid;
+  grid-template: 1fr 1fr 1fr/ 1fr;
+  background-color: rgb(222, 247, 255);
+}
+
+.title {
+  grid-row-start: 1;
+  text-align: center;
+  font-family: "ITCED";
+  font-size: 55px;
+  text-shadow: 4px 4px 5px white;
+}
+
+.contact_us {
+  grid-row-start: 2;
+  display: grid;
+  grid-template: 1fr 1fr 1fr/ 1fr 1fr;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+h2 {
+  grid-column: 1 / 3;
+  font-size: 30px;
+}
+
+.cotact_form {
+  grid-row: 2 / 5;
+  background-color: rgb(127, 133, 138);
+  padding: 20px;
+}
+
+.buttom {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.wave-btn {
+  width: 220px;
+  height: 60px;
+  display: flex;
+  border-radius: 0 0 10px 10px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.8s ease 0s;
+  position: relative;
+}
+
+.wave-btn:hover .wawe-btn_wawes {
+  top: 50px;
+}
+
+.wave_btn_text {
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  z-index: 10;
+}
+.wawe-btn_wawes {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background-color: rgb(24, 84, 249);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.wawe-btn_wawe:after,
+.wawe-btn_wawes:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 250%;
+  height: 250%;
+  transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+}
+
+.wawe-btn_wawes:before {
+  background-color: #000;
+  border-radius: 48%;
+  animation: wawes 5s infinite linear;
+}
+.wawe-btn_wawe:after {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 44%;
+  animation: wawes 10s infinite linear;
+}
+@keyframes wawes {
+  0% {
+    transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+  }
+  50% {
+  }
+  100% {
+    transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
+  }
+}
 
 /* Footer */
 footer {

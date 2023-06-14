@@ -3,82 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/new-site/style/contact_us.css" />
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header_logo">
-        <img src="/photo/logo_apple.png" alt="" />
-      </div>
-      <nav class="header_menu">
-        <ul class="header_list">
-          <li><a href="/index.html">MAIN PAGE</a></li>
-          <li><a href="/about_us.html">ABOUT US</a></li>
-          <li><a href="/attractions.html">ATTRACTIONS</a></li>
-          <li><a href="/events.html">EVENTS</a></li>
-        </ul>
-      </nav>
-      <hr class="hr-horizontal-gradient" />
-    </header>
-    <div>
-      <h2>Contact Us</h2>
-
-    <p>
-      We make bespoke balloons of all shapes and sizes, for all occasions and
-      purposes.
-    </p>
-
-    Please feel free to
-    <a href="mailto:balloons@example.com">send us an email</a> if you would like
-    to know more about our products
-<p>
-    <form action="process.php">
-        <div class="form-control">
-        <label for="fullname">Your full name</label>
-        <input id="fullname" type="text" name="fullname" />
+    <div class="wrapper">
+      <header class="header">
+        <div class="header_logo">
+          <img src="/new-site/photo/logo_apple.png" alt="" />
         </div>
-
-        <div class="form-control">
-        <label for="sername">Your full sername</label>
-        <input id="sername" type="text" name="sername" />
+        <nav class="header_menu">
+          <ul class="header_list">
+            <li><a href="/new-site/index.html">MAIN PAGE</a></li>
+            <li><a href="/new-site/about_us.html">ABOUT US</a></li>
+            <li><a href="/new-site/attractions.html">ATTRACTIONS</a></li>
+            <li><a href="/new-site/events.html">EVENTS</a></li>
+          </ul>
+        </nav>
+        <hr class="hr-horizontal-gradient" />
+      </header>
+      <main class="main">
+        <div class="title">
+          <h1>Contact Us</h1>
         </div>
+        <div class="contact_us">
+          <h2 class="contact_h2">Contact Form</h2>
+          <div class="contact_text">
+            <p>
+              We make bespoke balloons of all shapes and sizes, for all
+              occasions and purposes.
+            </p>
+            Please feel free to
+            <a href="mailto:balloons@example.com">send us an email</a> if you
+            would like to know more about our products
+          </div>
+          <div class="cotact_form">
+            <form action="process.php">
+              <div class="form-control">
+                <label for="fullname">Your full name</label>
+                <input id="fullname" type="text" name="fullname" />
+              </div>
 
-        <div class="form-control">
-        <label for="email">Your Email</label>
-        <input id="email" type="text" name="email" />
+              <div class="form-control">
+                <label for="sername">Your full sername</label>
+                <input id="sername" type="text" name="sername" />
+              </div>
+
+              <div class="form-control">
+                <label for="email">Your Email</label>
+                <input id="email" type="text" name="email" />
+              </div>
+
+              <div class="form-control">
+                <label for="age">Your age</label>
+                <input id="age" type="number" name="age" min="18" max="99" />
+              </div>
+
+              <div class="form-control">
+                <label for="story">Tell us your story</label>
+                <textarea id="story" type="story"> </textarea>
+              </div>
+
+              <div class="buttom">
+                <a1 href="" class="wave-btn">
+                  <span class="wave_btn_text">Commit & Push</span>
+                  <span class="wawe-btn_wawes"></span>
+                </a1>
+              </div>
+            </form>
+          </div>
         </div>
-
-        <div class="form-control">
-        <label for="age">Your age</label>
-        <input id="age" type="number" name="age" min="18" max="99"/>
-        </div>
-
-        <div class="form-control">
-        <label for="story">Tell us your story</label>
-        <textarea id="story" type="story">
-        </textarea>
-        </div>
-        
-        <input class="buttonGO" type="submit" value="GO!">
-        
-      </form>
-</p>
-<script>
-  const trigger = document.querySelector(".trigger");
-  const target = document.querySelector(".target");
-
-  trigger.addEventListener("click", changeTarget);
-
-  function changeTarget() {
-    target.classList.toggle("active-target");
-  }
-</script>
+      </main>
+      <footer>
+        <hr class="hr-horizontal-gradient" />
+        <div class="footer_text">My first Project of the Website</div>
+        <div class="footer_copy">Mykhailo Serhiienko 2023</div>
+      </footer>
     </div>
-    <footer>
-      <hr class="hr-horizontal-gradient" />
-      <div class="footer_text">My first Project of the Website</div>
-      <div class="footer_copy">Mykhailo Serhiienko 2023</div>
-    </footer>
   </body>
 </html>
