@@ -7,6 +7,16 @@ body {
   position: relative;
 }
 
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
 /* HEADER */
 .header {
   grid-area: header;
@@ -90,6 +100,79 @@ a:hover::after {
 }
 /* HEADER */
 
+.main {
+  grid-area: main;
+  padding: 30px 15px;
+  display: grid;
+  grid-template: 300px 1fr / 1fr 1fr;
+  background-color: rgb(222, 247, 255);
+  column-gap: 50px;
+}
+
+.title {
+  grid-row: 1;
+  grid-column: 1 / 3;
+  text-align: center;
+  font-family: "ITCED";
+  font-size: 55px;
+  text-shadow: 4px 4px 5px white;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: 600px 300px;
+  grid-auto-flow: row;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.item {
+  display: flex;
+  position: relative;
+  grid-row-start: 2;
+  height: 100%;
+  width: auto;
+}
+
+.item img {
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+}
+
+.item_big {
+  grid-row-start: 1;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: auto;
+}
+
+.item_big img {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+}
+
+.description {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "VRIN";
+}
+
+.description h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.description p {
+  font-size: 25px;
+}
 /* Footer */
 footer {
   grid-area: footer;

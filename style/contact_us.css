@@ -138,45 +138,53 @@ h2 {
   width: 100%;
   min-height: 100%;
   height: 100%;
-  overflow: hidden;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wave-btn {
-  width: 220px;
+  width: 280px;
   height: 60px;
   display: flex;
   border-radius: 0 0 10px 10px;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  transition: all 0.8s ease 0s;
   position: relative;
+  overflow: hidden;
+  transition: all 0.8s ease 0s;
+  border: 2px solid rgb(158, 158, 158);
 }
 
-.wave-btn:hover .wawe-btn_wawes {
-  top: 50px;
+.wave-btn:hover .wave-btn_waves {
+  top: -50px;
 }
 
 .wave_btn_text {
   color: #fff;
-  letter-spacing: 1px;
+  letter-spacing: 5px;
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
-  z-index: 10;
+  z-index: 3;
 }
-.wawe-btn_wawes {
+.wave-btn_waves {
   position: absolute;
+  z-index: 1;
   width: 280px;
   height: 280px;
   background-color: rgb(24, 84, 249);
+  top: 0;
+  left: 0;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: all 1s ease 0s;
 }
 
-.wawe-btn_wawe:after,
-.wawe-btn_wawes:before {
+.wave-btn_waves:after,
+.wave-btn_waves:before {
   content: "";
   position: absolute;
+  z-index: 2;
   top: 0;
   left: 50%;
   width: 250%;
@@ -184,14 +192,14 @@ h2 {
   transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
 }
 
-.wawe-btn_wawes:before {
+.wave-btn_waves:before {
   background-color: #000;
-  border-radius: 48%;
+  border-radius: 47%;
   animation: wawes 5s infinite linear;
 }
-.wawe-btn_wawe:after {
+.wave-btn_waves:after {
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 44%;
+  border-radius: 42%;
   animation: wawes 10s infinite linear;
 }
 @keyframes wawes {
